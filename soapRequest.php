@@ -1,5 +1,4 @@
 <?php
-ini_set('extension', 'soap');
 class Request
 {
     public $userName;

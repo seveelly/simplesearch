@@ -1,0 +1,12 @@
+{
+    "name": "simplesearch/1",
+    "description": "simple search",
+    "license": "mit",
+    "authors": [{
+        "name": "Eliud Ogola",
+        "email": "51315397+seveelly@users.noreply.github.com"
+    }],
+    "require": {
+        "ext-soap": "*"
+    }
+}
