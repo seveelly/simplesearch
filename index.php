@@ -61,7 +61,7 @@
         switchPicker("range");
 
         tippy("#destination", {
-            content: "Destination",
+            content: "Destination use only iata codes e.g MEL",
             placement: "top-start",
         });
 
