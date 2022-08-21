@@ -1,2 +1,3 @@
-# simplesearch
- a simple search
+# Simplesearch
+
+a simple search using php, and vanilla js.

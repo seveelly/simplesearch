@@ -80,23 +80,30 @@
             placement: "top-start",
         });
 
+
         new Autocomplete("destination", {
             onSearch: ({
                 currentValue
             }) => {
-                const api = `https://breakingbadapi.com/api/characters?name=${encodeURI(
-                      currentValue
-                         )}`;
-                return new Promise((resolve) => {
-                    fetch(api)
-                        .then((response) => response.json())
-                        .then((data) => {
-                            resolve(data);
-                        })
-                        .catch((error) => {
-                            console.error(error);
-                        });
-                });
+                // local data
+                const data = [{
+                        name: "MEM"
+                    },
+                    {
+                        name: "MEL"
+                    },
+                    {
+                        name: "ABQ"
+                    },
+                    {
+                        name: "MPM"
+                    },
+                ];
+                return data
+                    .sort((a, b) => a.name.localeCompare(b.name))
+                    .filter((element) => {
+                        return element.name.match(new RegExp(currentValue, "i"));
+                    });
             },
 
             onResults: ({
